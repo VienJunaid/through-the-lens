@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Through the Lens: Field of View</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1><span>Through the Lens</span> Field of View</h1>
+    <p class="takeaway">A wider view costs weight and sharpness.</p>
+  </header>
+
+  <main class="main">
+    <section class="stage" id="stage">
+      <canvas id="view" role="img" tabindex="0"></canvas>
+      <p class="readout" id="readout" aria-live="polite"></p>
+      <p class="hint" id="hint">Drag to look around</p>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <h2 id="name"></h2>
+      <p class="type" id="type"></p>
+      <p class="fact" id="fact"></p>
+      <table class="compare-table" id="compareTable" hidden></table>
+
+      <div class="details" id="details">
+      <div class="meter">
+        <div class="meter-head"><span>View covered</span><strong id="fovValue"></strong></div>
+        <div class="track"><div class="fill" id="fovFill"></div></div>
+      </div>
+      <div class="meter">
+        <div class="meter-head"><span>Weight</span><strong id="weightValue"></strong></div>
+        <div class="track"><div class="fill" id="weightFill"></div><div class="tick" id="weightTick"></div></div>
+      </div>
+      <div class="meter">
+        <div class="meter-head"><span>Sharpness (pixels per degree)</span><strong id="ppdValue"></strong></div>
+        <div class="track"><div class="fill" id="ppdFill"></div><div class="tick" id="ppdTick"></div></div>
+      </div>
+
+      <p class="optics"><span>Optics:</span> <span id="optics"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="picker" id="picker" aria-label="Choose a device"></nav>
+
+  <script src="devices.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
